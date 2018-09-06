@@ -1,0 +1,27 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "6.0.0",
+    "entityType" : "PersistentCookieModule",
+    "entityId" : "PersistentCookieModule",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "",
+    "defaults" : {
+      "idleTimeout" : 5,
+      "maxLife" : 5,
+      "useSecureCookie" : true,
+      "enforceClientIP" : false,
+      "useHttpOnlyCookie" : true,
+      "cookieName" : "session-jwt",
+      "hmacKey" : null,
+      "hmacKey-encrypted" : "AAAAA0FFUwIQGS48uP4S4ORfqGC38XByfs2qY+wLASBq/rP1sRNEqY3CPg6ZI3Aygaku3dlm+1T0VozlUKbof47IJI3b/kQSaOMovJDNy1+/"
+    },
+    "_type" : {
+      "_id" : "persistentcookie",
+      "name" : "Persistent Cookie",
+      "collection" : false
+    }
+  }
+}
