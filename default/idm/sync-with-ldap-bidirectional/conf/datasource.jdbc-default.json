@@ -1,13 +1,25 @@
 {
-  "driverClass" : "org.postgresql.Driver",
-  "jdbcUrl" : "jdbc:postgresql://&{openidm.repo.host}:&{openidm.repo.port}/openidm",
-  "databaseName" : "openidm",
-  "username" : "openidm",
-  "password" : "openidm",
-  "connectionTimeout" : 30000,
-  "connectionPool" : {
-    "type" : "hikari",
-    "minimumIdle" : 20,
-    "maximumPoolSize" : 50
-  }
+    "driverClass" : "org.postgresql.Driver",
+    "jdbcUrl" : "jdbc:postgresql://&{openidm.repo.host}:&{openidm.repo.port}/openidm",
+    "databaseName" : "openidm",
+    "username" : "openidm",
+    "password" : {
+        "$crypto" : {
+            "type" : "x-simple-encryption",
+            "value" : {
+                "cipher" : "AES/CBC/PKCS5Padding",
+                "salt" : "gUSeoRD/RaastodNBvSC9Q==",
+                "data" : "3HG5gm+UuksAgVQkNKjf+Q==",
+                "iv" : "cubJBVxlzgj2C0O7RNtaNg==",
+                "key" : "openidm-sym-default",
+                "mac" : "7sH/nqq9mMdexlaVNzvKOw=="
+            }
+        }
+    },
+    "connectionTimeout" : 30000,
+    "connectionPool" : {
+        "type" : "hikari",
+        "minimumIdle" : 20,
+        "maximumPoolSize" : 50
+    }
 }
